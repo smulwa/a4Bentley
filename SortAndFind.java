@@ -21,6 +21,11 @@ public class SortAndFind {
 		// displayMatrix(sortOneColumn(y, 1));
 
 		// System.out.println();
+
+		/*displayMatrix(y);
+		sortMatrix(y);
+		System.out.println();
+		displayMatrix(y);*/
 	}
 
 	public static int[][] generateRandomMatrix(int m, int n) {
@@ -95,5 +100,21 @@ public class SortAndFind {
 		// return x;
 
 	}
+
+	public static void sortMatrix(int[][] inputArr) {
+
+		//sort rows first
+		for (int i = 0; i < inputArr.length; i++) {
+			sortOneRow(inputArr[i]);
+
+		}
+		
+		//sort columns
+		for (int j = 0; j < inputArr[0].length; j++) {
+			sortOneColumn(inputArr, j);
+
+		}
+	}
+	public static void 
 
 }
