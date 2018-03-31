@@ -5,7 +5,6 @@
  * 
  */
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class SortAndFind {
@@ -131,7 +130,7 @@ public class SortAndFind {
 		// int index = [matrix.length][matrix[0].length];
 
 		int[] answerArray = new int[2];
-		for (int row = matrix.length - 1; row >= 1; row--) {
+		for (int row = matrix.length - 1; row > 1; row--) {
 			for (int col = 0; col < matrix[0].length; col++) {
 
 				if (matrix[row][col] == n) {
@@ -147,7 +146,7 @@ public class SortAndFind {
 
 				}
 				if (matrix[row][col] > n) {
-					col++;
+					col = col++;
 
 				} else if (matrix[row][col] != n) {
 					answerArray[0] = -1;
